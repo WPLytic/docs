@@ -47,10 +47,10 @@ const config: Config = {
   themeConfig: {
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'My Site',
+      title: 'WPLytic - WordPress Analytics Plugin Docs',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: 'WPLytic Logo',
+        src: 'img/logo.png',
       },
       items: [
         {
@@ -60,8 +60,8 @@ const config: Config = {
           label: 'Docs',
         },
         {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
+          href: 'https://wplytic.com/#pricing',
+          label: 'Pricing',
           position: 'right',
         },
       ],
