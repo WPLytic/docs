@@ -11,11 +11,11 @@ const config: Config = {
     v4: true,
   },
 
-  url: 'https://your-docusaurus-site.example.com',
-  baseUrl: '/',
+  url: 'https://wplytic.com',
+  baseUrl: '/docs/',
 
-  organizationName: 'facebook',
-  projectName: 'docusaurus',
+  organizationName: 'WPLytic',
+  projectName: 'WPLytic Docs',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
