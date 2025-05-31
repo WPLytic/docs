@@ -34,7 +34,7 @@ const config: Config = {
           routeBasePath: '/',
           sidebarPath: './sidebars.ts',
           editUrl:
-            'https://github.com/WPLytic/docs/',
+            'https://github.com/WPLytic/docs/tree/main/',
         },
         blog: false,
         pages: false,
