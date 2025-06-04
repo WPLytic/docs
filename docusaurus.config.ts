@@ -1,5 +1,5 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
@@ -46,6 +46,19 @@ const config: Config = {
     ],
   ],
 
+  themes: [
+    [
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      {
+        hashed: true,
+        indexBlog: false,
+        indexPages: false,
+        language: ['en'],
+        docsRouteBasePath: "/",
+      },
+    ],
+  ],
+
   themeConfig: {
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
@@ -64,6 +77,10 @@ const config: Config = {
         {
           href: 'https://wplytic.com/#pricing',
           label: 'Pricing',
+          position: 'right',
+        },
+        {
+          type: 'search',
           position: 'right',
         },
       ],
