@@ -3,8 +3,8 @@ import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'WPLytic',
+  tagline: 'WordPress Analytics Plugin',
   favicon: 'img/favicon.png',
 
   future: {
