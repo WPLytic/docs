@@ -26,22 +26,12 @@ This command generates static content into the `build` directory and can be serv
 
 ## Deployment
 
-Using SSH:
+Production is https://wplytic.com/docs/, served from the WordPress volume on Hetzner EX63. It is not GitHub Pages; do not use `docusaurus deploy` (it pushes to `gh-pages`).
 
-```bash
-USE_SSH=true yarn deploy
+Commit first, then from the repo root:
+
+```powershell
+pwsh -NoProfile -File scripts/deploy.ps1
 ```
 
-Not using SSH:
-
-```bash
-GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
-
-
-
-
-
-
+The script refuses uncommitted changes, builds, uploads `build/` over SFTP (add and replace only, no deletes) and checks that live pages match the build. Git is the backup: to roll back, check out the last good commit and run it again.

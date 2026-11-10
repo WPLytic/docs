@@ -17,7 +17,7 @@ const config: Config = {
   trailingSlash: true,
 
   organizationName: 'WPLytic',
-  projectName: 'WPLytic Docs',
+  projectName: 'docs',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',

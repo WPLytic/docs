@@ -17,14 +17,13 @@ document.querySelectorAll('a[href]').forEach(link => {
       category: 'LINK',
       // Preserve the existing example's event/tag names for saved reports.
       action: 'OUTBOUNT_CLICK',
-      label: destination.href.slice(0, 128),
-      data: { text: anchor.innerText || 'No Label' }
+      label: destination.hostname
     });
     WPLY.addTag('outbout_click');
   });
 });
 ```
 
-The example keeps the existing `OUTBOUNT_CLICK` event action and `outbout_click` tag names so saved reports continue to match. The event label is limited to 128 characters.
+The example records only the destination hostname. It omits the path, query string, fragment and link text, which can contain user-specific identifiers or tokens. It keeps the existing `OUTBOUNT_CLICK` action and `outbout_click` tag so saved report filters still match; new labels group clicks by hostname rather than full URL.
 
 This records a click, not a completed download or proof that the destination loaded. Leaving the page or a network failure can prevent delivery.
