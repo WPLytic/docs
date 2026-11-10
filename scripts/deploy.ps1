@@ -20,7 +20,11 @@ try {
 
     $build = Join-Path $root 'build'
     $files = Get-ChildItem -LiteralPath $build -Recurse -File
-    $dirs = $files | ForEach-Object { $_.DirectoryName.Substring($build.Length) -replace '\\', '/' } | Where-Object { $_ } | Sort-Object -Unique
+    # Every ancestor folder, parents first (sftp mkdir is not recursive; existing folders just print a failure).
+    $dirs = $files | ForEach-Object {
+        $rel = $_.DirectoryName.Substring($build.Length) -replace '\\', '/'
+        while ($rel) { $rel; $rel = $rel.Substring(0, $rel.LastIndexOf('/')) }
+    } | Sort-Object -Unique
     $batch = @($dirs | ForEach-Object { "-mkdir $remoteRoot$_" }) +
         @($files | ForEach-Object { "put `"$($_.FullName -replace '\\', '/')`" `"$remoteRoot$($_.FullName.Substring($build.Length) -replace '\\', '/')`"" })
     $batchFile = Join-Path ([IO.Path]::GetTempPath()) "wplytic-docs-deploy-$PID.txt"
