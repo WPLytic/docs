@@ -1,0 +1,13 @@
+# Canonical URLs for the docs folder at https://wplytic.com/docs/.
+# WordPress redirects www.wplytic.com to wplytic.com only for URLs that reach index.php.
+# Apache serves these files directly, so the docs need their own redirects.
+# Apache checks the last block first, so a www URL without the slash also needs one redirect only.
+
+<If "%{HTTP_HOST} =~ /^www\./i">
+    Redirect permanent "/docs/" "https://wplytic.com/docs/"
+</If>
+
+# Folder URL without its trailing slash. Apache sits behind the HTTPS proxy and would redirect to http://.
+<If "-d %{REQUEST_FILENAME} && %{REQUEST_URI} =~ m#[^/]$#">
+    RedirectMatch permanent "^(/docs(/.*)?)$" "https://wplytic.com$1/"
+</If>

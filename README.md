@@ -35,3 +35,5 @@ pwsh -NoProfile -File scripts/deploy.ps1
 ```
 
 The script refuses uncommitted changes, builds, uploads `build/` over SFTP (add and replace only, no deletes) and checks that live pages match the build. Git is the backup: to roll back, check out the last good commit and run it again.
+
+`static/.htaccess` is uploaded as `/docs/.htaccess`. It redirects `www.wplytic.com/docs/...` and folder URLs without the trailing slash to the `https://wplytic.com/docs/.../` URL. The script cannot delete it: to switch the redirects off, commit the file with comments only and deploy.
