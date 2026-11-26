@@ -7,7 +7,7 @@
 Events allow you to store arbitrary data for a specific session or pageview.\
 The main difference between **events** and [**tags**](tags.md) is that **tags** are unique strings stored per session, whereas events are complex objects saved per individual page visited.
 
-### WPLY.addEvent(eventData)
+## WPLY.addEvent(eventData)
 
 Example:
 
@@ -24,7 +24,7 @@ WPLY.addEvent({
 });
 ```
 
-#### Input parameters
+### Input parameters
 
 You can pass those values in the **eventData** argument:
 
@@ -53,7 +53,7 @@ You can pass those values in the **eventData** argument:
 **Note:** The **data** field is automatically converted to **JSON** using [**JSON.stringify()**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) on the client-side **if** the passed value is not already a string.
 :::
 
-#### Autofilled values
+### Autofilled values
 
 Those values are automatically added by the server for each event
 

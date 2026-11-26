@@ -5,4 +5,4 @@ You will be notified when a new version is released.
 
 To update to the latest version you must first set your license key (product code) and then click on the UPDATE NOW button if a new version was released:
 
-![](</img/image (3).png>)
+![Updates tab with the View changelog and Update now buttons and the license key status](</img/image (3).png>)

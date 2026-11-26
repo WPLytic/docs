@@ -39,6 +39,10 @@ const config: Config = {
         },
         blog: false,
         pages: false,
+        // The search page is a tool, not a page for search engines.
+        sitemap: {
+          ignorePatterns: ['/docs/search/**'],
+        },
         theme: {
           customCss: './src/css/custom.css',
         },

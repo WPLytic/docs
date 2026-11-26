@@ -33,7 +33,7 @@ You can also use a HTML5 data attribute to track clicks on specific elements usi
 <a href="checkout.html" data-wply-click-tag="checkout">My checkout link</a>
 ```
 
-### Examples
+## Examples
 
 1. Tagging visitors that scrolled at least once on a page:
 

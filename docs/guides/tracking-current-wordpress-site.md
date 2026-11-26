@@ -12,4 +12,4 @@ Here you can set to not track admins, or only logged in users, or to track only 
 
 Remember to click "Save" after making any change:
 
-![](</img/image (1).png>)
+![Tracked user categories and tracked pages settings with the Save button](</img/image (1).png>)

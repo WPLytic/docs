@@ -4,7 +4,7 @@ By default, UTM parameters are not tracked in any way, they are even removed fro
 
 If you want to store UTM values for each session, you can tag each session with the name and value of selected parameters. Those values are stored as analytics tags. Use generic campaign labels only: do not put names, email addresses, order or account IDs, access tokens or other personal or secret data in UTM values. Add this after the tracking snippet:
 
-### Store UTM parameters as tags
+## Store UTM parameters as tags
 
 ```html
 <script>
